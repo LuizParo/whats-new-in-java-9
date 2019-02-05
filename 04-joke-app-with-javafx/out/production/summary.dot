@@ -1,0 +1,7 @@
+digraph "summary" {
+  "."                                                -> "java.base (java.base)";
+  "."                                                -> "javafx.base (javafx.base)";
+  "."                                                -> "javafx.controls (javafx.controls)";
+  "."                                                -> "javafx.fxml (javafx.fxml)";
+  "."                                                -> "javafx.graphics (javafx.graphics)";
+}
