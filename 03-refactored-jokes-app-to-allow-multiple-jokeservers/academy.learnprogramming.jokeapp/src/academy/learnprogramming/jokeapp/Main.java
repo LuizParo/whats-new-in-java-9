@@ -1,31 +1,37 @@
 package academy.learnprogramming.jokeapp;
 
 import academy.learnprogramming.jokeserver.JokeServer;
-import academy.learnprogramming.jokeserver.kid.KidJokeServer;
-import academy.learnprogramming.jokeserver.programmer.ProgrammerJokeServer;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.ServiceLoader;
 
 
 public class Main {
 
 	public static void main(String [] args) {
+        Map<String, JokeServer> servers = new HashMap<>();
 
-        JokeServer programmer = new ProgrammerJokeServer();
-        JokeServer kid = new KidJokeServer();
+        ServiceLoader<JokeServer> loader = ServiceLoader.load(JokeServer.class);
+
+        int key = 1;
+        for (JokeServer server : loader) {
+            servers.put(String.valueOf(key++), server);
+        }
+
         Scanner scanner = new Scanner(System.in);
         String choice = "";
         do {
 
-            System.out.print("\n(K)id joke or (P)rogrammer joke? (Q to quit) : ");
+            System.out.print("\n(Q to quit) : ");
             choice = scanner.nextLine().trim().toUpperCase();
 
-            if (choice.equals("K")) {
-                System.out.println(kid.getJoke());
-            } else if (choice.equals("P")) {
-                System.out.println(programmer.getJoke());
+            if (servers.containsKey(choice)) {
+                System.out.println(servers.get(choice).getJoke());
+            } else if (!choice.equals("Q")) {
+                System.out.println("Sorry, try again");
             }
-
         } while (!choice.equals("Q"));
 
         System.out.println("Thanks! I hope you laughed!!");
