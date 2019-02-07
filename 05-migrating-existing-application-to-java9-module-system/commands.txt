@@ -1,0 +1,15 @@
+# copy the gson jar file to mods/ directory
+cp lib/gson-2.8.1.jar mods
+
+# compiling the project with the automatic module gson (created using the folder mods/gson-*.*.*.jar)
+javac --add-modules gson --module-path mods -d out $(find src -name '*.java')
+
+# creates a jar from the compiled sources
+jar --create --file lib/person.jar -C out .
+
+# runs the app adding the automatic module gson
+java --module-path mods --class-path lib/person.jar --add-modules gson academy.learnprogramming.main.Main
+
+# shows the dependencies from the jar file w/ the module gson
+jdeps -summary --add-modules gson --module-path mods lib/person.jar
+
