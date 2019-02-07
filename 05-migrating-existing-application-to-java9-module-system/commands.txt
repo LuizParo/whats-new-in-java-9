@@ -12,4 +12,3 @@ java --module-path mods --class-path lib/person.jar --add-modules gson academy.l
 
 # shows the dependencies from the jar file w/ the module gson
 jdeps -summary --add-modules gson --module-path mods lib/person.jar
-

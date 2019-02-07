@@ -1,3 +1,3 @@
-java --class-path lib/gson-2.8.1.jar:lib/person.jar  \
-	academy.learnprogramming.main.Main
-
+java  --module-path mods \
+	  --add-modules java.sql \
+	  --module main/academy.learnprogramming.main.Main 
