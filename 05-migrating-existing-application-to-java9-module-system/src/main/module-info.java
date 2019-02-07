@@ -1,4 +1,4 @@
 module main {
-    requires gson;
     requires models;
+    requires gson;
 }

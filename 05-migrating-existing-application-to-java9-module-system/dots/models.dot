@@ -1,0 +1,7 @@
+digraph "models" {
+    // Path: /Users/LuizGuilherme/Documents/Particular/Projetos_Java/Udemy/whats-new-in-java-9/workplace/05-migrating-existing-application-to-java9-module-system/mods/models.jar
+   "academy.learnprogramming.models"                  -> "academy.learnprogramming.models (models)";
+   "academy.learnprogramming.models"                  -> "com.google.gson.annotations (gson)";
+   "academy.learnprogramming.models"                  -> "java.lang (java.base)";
+   "academy.learnprogramming.models"                  -> "java.util (java.base)";
+}

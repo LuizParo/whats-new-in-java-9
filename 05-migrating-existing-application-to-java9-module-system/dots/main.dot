@@ -1,0 +1,8 @@
+digraph "main" {
+    // Path: /Users/LuizGuilherme/Documents/Particular/Projetos_Java/Udemy/whats-new-in-java-9/workplace/05-migrating-existing-application-to-java9-module-system/mods/main.jar
+   "academy.learnprogramming.main"                    -> "academy.learnprogramming.models (models)";
+   "academy.learnprogramming.main"                    -> "com.google.gson (gson)";
+   "academy.learnprogramming.main"                    -> "java.io (java.base)";
+   "academy.learnprogramming.main"                    -> "java.lang (java.base)";
+   "academy.learnprogramming.main"                    -> "java.util (java.base)";
+}
