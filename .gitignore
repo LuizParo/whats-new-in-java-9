@@ -40,5 +40,5 @@ nbdist/
 hs_err_pid*
 
 mlib/
-
 **/mvn/
+**/target/*
